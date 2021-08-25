@@ -5,15 +5,17 @@ for position in range(len(paths)):
     int_list = paths[position].split(' => ')
     path_dict[int_list[0]] = int_list[1]
 
+    
 print (path_dict)
-
 source = input("\nChoose the starting place: ").upper()
 destination = input("\nChoose the destination: ").upper()
+
 
 flight_path = []
 flight_path.append(source)
 flight_path.append(path_dict[source])
 next_hop = path_dict[source]
+
 
 for position in path_dict.items():
     if path_dict[next_hop] == destination:
@@ -23,7 +25,9 @@ for position in path_dict.items():
         flight_path.append(path_dict[next_hop])
         next_hop = path_dict[next_hop]
 
+        
 flight_path = " => ".join(flight_path)
+
 
 flight = '''  ,--.
   \  _\_
