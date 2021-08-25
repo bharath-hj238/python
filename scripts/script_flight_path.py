@@ -5,8 +5,7 @@ for position in range(len(paths)):
     int_list = paths[position].split(' => ')
     path_dict[int_list[0]] = int_list[1]
 
-    
-print (path_dict)
+
 source = input("\nChoose the starting place: ").upper()
 destination = input("\nChoose the destination: ").upper()
 
